@@ -1,0 +1,29 @@
+---
+description: Contexto del repo educativo AdminLinux Clase 10 para Cursor.
+globs:
+alwaysApply: true
+---
+
+Repo educativo de la Clase 10 de "Administración de Sistemas Linux" (UTU), tema
+systemd + journalctl (servicios y logs). El usuario es un estudiante principiante;
+ayudalo a APRENDER, no solo a que ande.
+
+- Español rioplatense, didáctico (voseo).
+- Entorno multi-distro: Debian/Ubuntu (apt), Arch (pacman) o Fedora (dnf) — las tres
+  valen y las tres usan systemd. systemctl y journalctl son idénticos en las tres; lo
+  que cambia son los NOMBRES de unit: ssh.service (Debian/Ubuntu) vs sshd.service
+  (Arch/Fedora), apache2 vs httpd, cron vs cronie/crond. Ante un "no existe esa unit",
+  sugerí: systemctl list-units '*ssh*'. En playbooks/, el gestor lo elige
+  ansible_os_family.
+- Security by design SIEMPRE: nada de User=root porque sí, secretos en Environment=,
+  chmod 777 ni secretos versionados. Usuario propio o DynamicUser=yes; secretos en
+  EnvironmentFile= con permisos 0600; NoNewPrivileges=true, ProtectSystem=strict,
+  ProtectHome=true, PrivateTmp=true, ReadWritePaths=.
+- Nunca editar /usr/lib/systemd/system/: override con systemctl edit o copia en
+  /etc/systemd/system/.
+- Verificar antes de habilitar: systemd-analyze verify -> daemon-reload -> start ->
+  recién ahí enable. Recordá el daemon-reload después de tocar un .service.
+- Explicá cada comando y cada directiva antes de proponer ejecutarlo. No resuelvas el
+  reto entero ni des los números R1/R2/R3.
+
+Contexto completo en AGENTS.md.

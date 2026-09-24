@@ -1,0 +1,62 @@
+---
+# comprobar_bandera.yml — ¿tu bandera es la correcta?
+#
+# SECURITY BY DESIGN: el repo NO guarda la bandera en texto plano. Guarda solo su
+# huella SHA-256 en  secretos/bandera.sha256. Este playbook calcula la huella de
+# LO QUE VOS PASÁS y la compara con la esperada. Si coinciden, la bandera es válida.
+# Es la misma idea con la que se guardan las contraseñas: nunca el secreto, solo su
+# hash (para contraseñas de verdad, además, se usa hashing lento con sal: bcrypt/argon2).
+#
+# Uso:
+#   ansible-playbook comprobar_bandera.yml -e "bandera=BANDERA{...}"
+#
+# Ejemplo (formato, no la respuesta):
+#   ansible-playbook comprobar_bandera.yml -e "bandera=BANDERA{42-serviciod-9}"
+
+- name: Verificar la bandera del reto (por hash, sin exponer el secreto)
+  hosts: local
+  become: false
+  gather_facts: false
+
+  vars:
+    bandera: ""   # la pasás con  -e "bandera=BANDERA{...}"
+
+  tasks:
+    - name: Necesito que me pases una bandera
+      ansible.builtin.assert:
+        that:
+          - bandera | length > 0
+        fail_msg: >-
+          Pasame tu bandera así:
+          ansible-playbook comprobar_bandera.yml -e "bandera=BANDERA{...}"
+        quiet: true
+
+    - name: Revisar que tenga la forma BANDERA{R1-R2-R3}
+      ansible.builtin.assert:
+        that:
+          - bandera | trim is match('^BANDERA\{[0-9]+-[a-zA-Z0-9_.@-]+-[0-9]+\}$')
+        fail_msg: >-
+          El formato no cierra. Tiene que ser EXACTAMENTE
+          BANDERA{<R1>-<R2>-<R3>}: R1 y R3 son números, R2 es el nombre de la
+          unidad SIN el sufijo '.service' y sin espacios. Ojo con las llaves.
+        quiet: true
+
+    - name: Leer la huella esperada (solo el hash vive en el repo)
+      ansible.builtin.set_fact:
+        hash_esperado: "{{ lookup('file', playbook_dir + '/secretos/bandera.sha256') | trim }}"
+
+    - name: Comparar la huella de tu bandera con la esperada
+      ansible.builtin.assert:
+        that:
+          - (bandera | trim | hash('sha256')) == hash_esperado
+        fail_msg: >-
+          ❌ Esa no es. Repasá el postmortem: ¿contaste exactamente
+          'Failed with result' (con F mayúscula, hay líneas en minúscula que NO
+          cuentan)? ¿R2 va SIN el '.service'? ¿los 'Scheduled restart job' son
+          solo los de ESA unidad y no los de todas?
+        success_msg: "✅ ¡BANDERA CORRECTA! Postmortem cerrado. 🎉"
+        quiet: true
+
+    - name: Trofeo
+      ansible.builtin.debug:
+        msg: "🏁 {{ bandera | trim }} — capturada con journalctl/grep/awk y verificada con Ansible."

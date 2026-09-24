@@ -1,0 +1,23 @@
+2026-09-18T09:00:01-0300 srv-demo systemd[1]: Starting demo-web.service - Sitio de demostracion...
+2026-09-18T09:00:01-0300 srv-demo systemd[1]: Started demo-web.service - Sitio de demostracion.
+2026-09-18T09:00:02-0300 srv-demo demo-web[1401]: escuchando en 0.0.0.0:8080
+2026-09-18T09:03:30-0300 srv-demo systemd[1]: Starting demo-cola.service - Cola de trabajos...
+2026-09-18T09:03:30-0300 srv-demo demo-cola[1450]: ERROR: no encuentro /etc/demo-cola/cola.conf
+2026-09-18T09:03:30-0300 srv-demo systemd[1]: demo-cola.service: Main process exited, code=exited, status=1/FAILURE
+2026-09-18T09:03:30-0300 srv-demo systemd[1]: demo-cola.service: Failed with result 'exit-code'.
+2026-09-18T09:03:31-0300 srv-demo systemd[1]: demo-cola.service: Scheduled restart job, restart counter is at 1.
+2026-09-18T09:03:36-0300 srv-demo systemd[1]: Starting demo-cola.service - Cola de trabajos...
+2026-09-18T09:03:36-0300 srv-demo demo-cola[1455]: ERROR: no encuentro /etc/demo-cola/cola.conf
+2026-09-18T09:03:36-0300 srv-demo systemd[1]: demo-cola.service: Failed with result 'exit-code'.
+2026-09-18T09:03:37-0300 srv-demo systemd[1]: demo-cola.service: Scheduled restart job, restart counter is at 2.
+2026-09-18T09:03:42-0300 srv-demo systemd[1]: demo-cola.service: Start request repeated too quickly.
+2026-09-18T09:03:42-0300 srv-demo systemd[1]: demo-cola.service: Failed with result 'exit-code'.
+2026-09-18T09:03:42-0300 srv-demo systemd[1]: Failed to start demo-cola.service - Cola de trabajos.
+2026-09-18T09:10:05-0300 srv-demo sshd[1502]: Failed password for invalid user admin from 203.0.113.9 port 40122 ssh2
+2026-09-18T09:10:12-0300 srv-demo sshd[1504]: Failed password for invalid user admin from 203.0.113.9 port 40130 ssh2
+2026-09-18T09:10:19-0300 srv-demo sshd[1506]: Accepted publickey for ulyses from 10.0.2.15 port 40138 ssh2
+2026-09-18T09:15:00-0300 srv-demo systemd[1]: Reloaded demo-web.service - Sitio de demostracion.
+2026-09-18T09:30:00-0300 srv-demo systemd[1]: demo-respaldo.service: Deactivated successfully.
+2026-09-18T09:30:00-0300 srv-demo systemd[1]: Finished demo-respaldo.service - Respaldo de demostracion.
+2026-09-18T09:44:08-0300 srv-demo kernel: TCP: request_sock_TCP: Possible SYN flooding on port 8080.
+2026-09-18T09:52:17-0300 srv-demo demo-web[1401]: WARN: 12 peticiones 502 en el ultimo minuto

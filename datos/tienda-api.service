@@ -1,0 +1,16 @@
+[Unit]
+Description=API de la tienda (unit de PRÁCTICA - tiene errores a propósito)
+After=network.target
+
+[Service]
+Type=forking
+User=root
+WorkingDirectory=/opt/tienda
+ExecStart=node server.js
+Environment="DB_PASSWORD=Sup3rS3cret2026"
+Environment="TIENDA_PUERTO=8080"
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target

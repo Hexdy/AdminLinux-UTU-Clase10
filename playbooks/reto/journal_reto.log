@@ -1,0 +1,140 @@
+2026-09-18T02:10:44-0300 web01 systemd[1]: Starting systemd-journald.service - Journal Service...
+2026-09-18T02:10:44-0300 web01 systemd[1]: Started systemd-journald.service - Journal Service.
+2026-09-18T02:10:45-0300 web01 systemd[1]: Reached target sysinit.target - System Initialization.
+2026-09-18T02:10:46-0300 web01 systemd[1]: Reached target basic.target - Basic System.
+2026-09-18T02:10:47-0300 web01 systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
+2026-09-18T02:10:47-0300 web01 systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+2026-09-18T02:10:48-0300 web01 systemd[1]: Starting nginx.service - A high performance web server...
+2026-09-18T02:10:49-0300 web01 nginx[701]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+2026-09-18T02:10:49-0300 web01 systemd[1]: Started nginx.service - A high performance web server.
+2026-09-18T02:10:50-0300 web01 systemd[1]: Started cron.service - Regular background program processing daemon.
+2026-09-18T02:10:51-0300 web01 systemd[1]: Reached target multi-user.target - Multi-User System.
+2026-09-18T02:10:51-0300 web01 systemd[1]: Startup finished in 3.412s (kernel) + 9.870s (userspace) = 13.283s.
+2026-09-18T02:14:03-0300 web01 systemd[1]: Starting pagosd.service - Pasarela de pagos (demo UTU)...
+2026-09-18T02:14:03-0300 web01 pagosd[2201]: FATAL: no se pudo leer /etc/pagosd/pagosd.env: Permission denied
+2026-09-18T02:14:03-0300 web01 systemd[1]: pagosd.service: Main process exited, code=exited, status=1/FAILURE
+2026-09-18T02:14:03-0300 web01 systemd[1]: pagosd.service: Failed with result 'exit-code'.
+2026-09-18T02:14:03-0300 web01 systemd[1]: Failed to start pagosd.service - Pasarela de pagos (demo UTU).
+2026-09-18T02:14:04-0300 web01 systemd[1]: pagosd.service: Scheduled restart job, restart counter is at 1.
+2026-09-18T02:14:09-0300 web01 systemd[1]: Starting pagosd.service - Pasarela de pagos (demo UTU)...
+2026-09-18T02:14:09-0300 web01 pagosd[2202]: FATAL: no se pudo leer /etc/pagosd/pagosd.env: Permission denied
+2026-09-18T02:14:09-0300 web01 systemd[1]: pagosd.service: Main process exited, code=exited, status=1/FAILURE
+2026-09-18T02:14:09-0300 web01 systemd[1]: pagosd.service: Failed with result 'exit-code'.
+2026-09-18T02:14:09-0300 web01 systemd[1]: Failed to start pagosd.service - Pasarela de pagos (demo UTU).
+2026-09-18T02:14:10-0300 web01 systemd[1]: pagosd.service: Scheduled restart job, restart counter is at 2.
+2026-09-18T02:14:15-0300 web01 systemd[1]: Starting pagosd.service - Pasarela de pagos (demo UTU)...
+2026-09-18T02:14:15-0300 web01 pagosd[2203]: FATAL: no se pudo leer /etc/pagosd/pagosd.env: Permission denied
+2026-09-18T02:14:15-0300 web01 systemd[1]: pagosd.service: Main process exited, code=exited, status=1/FAILURE
+2026-09-18T02:14:15-0300 web01 systemd[1]: pagosd.service: Failed with result 'exit-code'.
+2026-09-18T02:14:15-0300 web01 systemd[1]: Failed to start pagosd.service - Pasarela de pagos (demo UTU).
+2026-09-18T02:14:16-0300 web01 systemd[1]: pagosd.service: Scheduled restart job, restart counter is at 3.
+2026-09-18T02:14:21-0300 web01 systemd[1]: Starting pagosd.service - Pasarela de pagos (demo UTU)...
+2026-09-18T02:14:21-0300 web01 pagosd[2204]: FATAL: no se pudo leer /etc/pagosd/pagosd.env: Permission denied
+2026-09-18T02:14:21-0300 web01 systemd[1]: pagosd.service: Main process exited, code=exited, status=1/FAILURE
+2026-09-18T02:14:21-0300 web01 systemd[1]: pagosd.service: Failed with result 'exit-code'.
+2026-09-18T02:14:21-0300 web01 systemd[1]: Failed to start pagosd.service - Pasarela de pagos (demo UTU).
+2026-09-18T02:14:22-0300 web01 systemd[1]: pagosd.service: Scheduled restart job, restart counter is at 4.
+2026-09-18T02:14:27-0300 web01 systemd[1]: Starting pagosd.service - Pasarela de pagos (demo UTU)...
+2026-09-18T02:14:27-0300 web01 pagosd[2205]: FATAL: no se pudo leer /etc/pagosd/pagosd.env: Permission denied
+2026-09-18T02:14:27-0300 web01 systemd[1]: pagosd.service: Main process exited, code=exited, status=1/FAILURE
+2026-09-18T02:14:27-0300 web01 systemd[1]: pagosd.service: Failed with result 'exit-code'.
+2026-09-18T02:14:27-0300 web01 systemd[1]: Failed to start pagosd.service - Pasarela de pagos (demo UTU).
+2026-09-18T02:14:28-0300 web01 systemd[1]: pagosd.service: Scheduled restart job, restart counter is at 5.
+2026-09-18T02:14:33-0300 web01 systemd[1]: Starting pagosd.service - Pasarela de pagos (demo UTU)...
+2026-09-18T02:14:33-0300 web01 pagosd[2206]: FATAL: no se pudo leer /etc/pagosd/pagosd.env: Permission denied
+2026-09-18T02:14:33-0300 web01 systemd[1]: pagosd.service: Main process exited, code=exited, status=1/FAILURE
+2026-09-18T02:14:33-0300 web01 systemd[1]: pagosd.service: Failed with result 'exit-code'.
+2026-09-18T02:14:33-0300 web01 systemd[1]: Failed to start pagosd.service - Pasarela de pagos (demo UTU).
+2026-09-18T02:14:34-0300 web01 systemd[1]: pagosd.service: Scheduled restart job, restart counter is at 6.
+2026-09-18T02:14:39-0300 web01 systemd[1]: Starting pagosd.service - Pasarela de pagos (demo UTU)...
+2026-09-18T02:14:39-0300 web01 pagosd[2207]: FATAL: no se pudo leer /etc/pagosd/pagosd.env: Permission denied
+2026-09-18T02:14:39-0300 web01 systemd[1]: pagosd.service: Main process exited, code=exited, status=1/FAILURE
+2026-09-18T02:14:39-0300 web01 systemd[1]: pagosd.service: Failed with result 'exit-code'.
+2026-09-18T02:14:39-0300 web01 systemd[1]: Failed to start pagosd.service - Pasarela de pagos (demo UTU).
+2026-09-18T02:14:40-0300 web01 systemd[1]: pagosd.service: Scheduled restart job, restart counter is at 7.
+2026-09-18T02:14:45-0300 web01 systemd[1]: pagosd.service: Start request repeated too quickly.
+2026-09-18T02:14:45-0300 web01 systemd[1]: pagosd.service: Failed with result 'exit-code'.
+2026-09-18T02:14:45-0300 web01 systemd[1]: Failed to start pagosd.service - Pasarela de pagos (demo UTU).
+2026-09-18T02:30:01-0300 web01 systemd[1]: Starting logrotate.service - Rotate log files...
+2026-09-18T02:30:02-0300 web01 systemd[1]: logrotate.service: Deactivated successfully.
+2026-09-18T02:30:02-0300 web01 systemd[1]: Finished logrotate.service - Rotate log files.
+2026-09-18T03:00:05-0300 web01 systemd-timesyncd[612]: Contacted time server 162.159.200.1:123 (ntp.ubuntu.com).
+2026-09-18T03:02:10-0300 web01 systemd[1]: Starting tienda-api.service - API de la tienda...
+2026-09-18T03:02:10-0300 web01 tienda-api[2401]: WARN: el healthcheck contra 127.0.0.1:8080 no respondio
+2026-09-18T03:02:10-0300 web01 systemd[1]: tienda-api.service: start operation timed out. Terminating.
+2026-09-18T03:02:10-0300 web01 systemd[1]: tienda-api.service: Failed with result 'timeout'.
+2026-09-18T03:02:10-0300 web01 systemd[1]: Failed to start tienda-api.service - API de la tienda.
+2026-09-18T03:02:11-0300 web01 systemd[1]: tienda-api.service: Scheduled restart job, restart counter is at 1.
+2026-09-18T03:02:12-0300 web01 systemd[1]: Dependency failed for tienda-web.service - Front de la tienda.
+2026-09-18T03:02:12-0300 web01 systemd[1]: tienda-web.service: Job tienda-web.service/start failed with result 'dependency'.
+2026-09-18T03:04:40-0300 web01 systemd[1]: Starting tienda-api.service - API de la tienda...
+2026-09-18T03:04:40-0300 web01 tienda-api[2402]: WARN: el healthcheck contra 127.0.0.1:8080 no respondio
+2026-09-18T03:04:40-0300 web01 systemd[1]: tienda-api.service: start operation timed out. Terminating.
+2026-09-18T03:04:40-0300 web01 systemd[1]: tienda-api.service: Failed with result 'timeout'.
+2026-09-18T03:04:40-0300 web01 systemd[1]: Failed to start tienda-api.service - API de la tienda.
+2026-09-18T03:04:41-0300 web01 systemd[1]: tienda-api.service: Scheduled restart job, restart counter is at 2.
+2026-09-18T03:07:10-0300 web01 systemd[1]: Starting tienda-api.service - API de la tienda...
+2026-09-18T03:07:10-0300 web01 tienda-api[2403]: WARN: el healthcheck contra 127.0.0.1:8080 no respondio
+2026-09-18T03:07:10-0300 web01 systemd[1]: tienda-api.service: start operation timed out. Terminating.
+2026-09-18T03:07:10-0300 web01 systemd[1]: tienda-api.service: Failed with result 'timeout'.
+2026-09-18T03:07:10-0300 web01 systemd[1]: Failed to start tienda-api.service - API de la tienda.
+2026-09-18T03:07:11-0300 web01 systemd[1]: tienda-api.service: Scheduled restart job, restart counter is at 3.
+2026-09-18T03:07:12-0300 web01 systemd[1]: Dependency failed for tienda-web.service - Front de la tienda.
+2026-09-18T03:07:12-0300 web01 systemd[1]: tienda-web.service: Job tienda-web.service/start failed with result 'dependency'.
+2026-09-18T03:09:40-0300 web01 systemd[1]: Starting tienda-api.service - API de la tienda...
+2026-09-18T03:09:40-0300 web01 tienda-api[2404]: WARN: el healthcheck contra 127.0.0.1:8080 no respondio
+2026-09-18T03:09:40-0300 web01 systemd[1]: tienda-api.service: start operation timed out. Terminating.
+2026-09-18T03:09:40-0300 web01 systemd[1]: tienda-api.service: Failed with result 'timeout'.
+2026-09-18T03:09:40-0300 web01 systemd[1]: Failed to start tienda-api.service - API de la tienda.
+2026-09-18T03:09:41-0300 web01 systemd[1]: tienda-api.service: Scheduled restart job, restart counter is at 4.
+2026-09-18T03:12:10-0300 web01 systemd[1]: tienda-api.service: Start request repeated too quickly.
+2026-09-18T03:12:10-0300 web01 systemd[1]: tienda-api.service: Failed with result 'timeout'.
+2026-09-18T03:12:10-0300 web01 systemd[1]: Failed to start tienda-api.service - API de la tienda.
+2026-09-18T03:15:22-0300 web01 nginx[701]: 10.0.2.15 - - "GET /api/pagos HTTP/1.1" 502 166 "-" "curl/8.5.0"
+2026-09-18T03:15:22-0300 web01 nginx[701]: upstream connect failed (111: Connection refused) while connecting to upstream
+2026-09-18T03:16:40-0300 web01 sshd[1188]: Failed password for invalid user admin from 203.0.113.44 port 44112 ssh2
+2026-09-18T03:16:47-0300 web01 sshd[1190]: Failed password for invalid user test from 203.0.113.44 port 44118 ssh2
+2026-09-18T03:16:55-0300 web01 sshd[1192]: Failed password for invalid user root from 203.0.113.44 port 44126 ssh2
+2026-09-18T03:30:00-0300 web01 systemd[1]: Starting respaldo.service - Respaldo nocturno...
+2026-09-18T03:30:02-0300 web01 respaldo[2694]: error: no queda espacio en /var/respaldos (uso 94%)
+2026-09-18T03:30:02-0300 web01 systemd[1]: respaldo.service: Main process exited, code=exited, status=28/n/a
+2026-09-18T03:30:02-0300 web01 systemd[1]: respaldo.service: Failed with result 'exit-code'.
+2026-09-18T03:30:03-0300 web01 systemd[1]: Failed to start respaldo.service - Respaldo nocturno.
+2026-09-18T04:00:00-0300 web01 systemd[1]: Starting man-db.service - Daily man-db regeneration...
+2026-09-18T04:00:09-0300 web01 systemd[1]: Finished man-db.service - Daily man-db regeneration.
+2026-09-18T04:20:05-0300 web01 systemd[1]: Starting colas.service - Worker de colas...
+2026-09-18T04:20:05-0300 web01 kernel: colas-worker[2501]: segfault at 0 ip 00007f1a error 4
+2026-09-18T04:20:05-0300 web01 systemd[1]: colas.service: Main process exited, code=dumped, status=11/SEGV
+2026-09-18T04:20:05-0300 web01 systemd[1]: colas.service: Failed with result 'signal'.
+2026-09-18T04:20:06-0300 web01 systemd[1]: colas.service: Scheduled restart job, restart counter is at 1.
+2026-09-18T04:21:35-0300 web01 systemd[1]: Starting colas.service - Worker de colas...
+2026-09-18T04:21:35-0300 web01 kernel: colas-worker[2502]: segfault at 0 ip 00007f1a error 4
+2026-09-18T04:21:35-0300 web01 systemd[1]: colas.service: Main process exited, code=dumped, status=11/SEGV
+2026-09-18T04:21:35-0300 web01 systemd[1]: colas.service: Failed with result 'signal'.
+2026-09-18T04:21:36-0300 web01 systemd[1]: colas.service: Scheduled restart job, restart counter is at 2.
+2026-09-18T04:23:05-0300 web01 systemd[1]: Starting colas.service - Worker de colas...
+2026-09-18T04:23:05-0300 web01 systemd[1]: colas.service: Main process exited, code=dumped, status=11/SEGV
+2026-09-18T04:23:05-0300 web01 systemd[1]: colas.service: Failed with result 'signal'.
+2026-09-18T04:23:06-0300 web01 systemd[1]: Failed to start colas.service - Worker de colas.
+2026-09-18T04:30:00-0300 web01 systemd[1]: Starting respaldo.service - Respaldo nocturno...
+2026-09-18T04:30:02-0300 web01 respaldo[2699]: error: no queda espacio en /var/respaldos (uso 99%)
+2026-09-18T04:30:02-0300 web01 systemd[1]: respaldo.service: Main process exited, code=exited, status=28/n/a
+2026-09-18T04:30:02-0300 web01 systemd[1]: respaldo.service: Failed with result 'exit-code'.
+2026-09-18T04:30:03-0300 web01 systemd[1]: Failed to start respaldo.service - Respaldo nocturno.
+2026-09-18T04:45:11-0300 web01 pagosd-watchdog[2701]: aviso: la pasarela de pagos sigue caida, escalando a guardia
+2026-09-18T05:30:00-0300 web01 systemd[1]: fstrim.service: Deactivated successfully.
+2026-09-18T06:25:13-0300 web01 kernel: TCP: request_sock_TCP: Possible SYN flooding on port 443. Dropping request.
+2026-09-18T07:52:11-0300 web01 sshd[3310]: Accepted publickey for sre from 198.51.100.7 port 51422 ssh2
+2026-09-18T07:53:02-0300 web01 sudo[3344]: sre : TTY=pts/0 ; PWD=/home/sre ; USER=root ; COMMAND=/usr/bin/systemctl restart pagosd.service
+2026-09-18T07:53:02-0300 web01 systemd[1]: Starting pagosd.service - Pasarela de pagos (demo UTU)...
+2026-09-18T07:53:02-0300 web01 pagosd[3350]: FATAL: no se pudo leer /etc/pagosd/pagosd.env: Permission denied
+2026-09-18T07:53:02-0300 web01 systemd[1]: pagosd.service: Main process exited, code=exited, status=1/FAILURE
+2026-09-18T07:53:02-0300 web01 systemd[1]: pagosd.service: Failed with result 'exit-code'.
+2026-09-18T07:53:03-0300 web01 systemd[1]: Failed to start pagosd.service - Pasarela de pagos (demo UTU).
+2026-09-18T07:54:40-0300 web01 sudo[3361]: sre : TTY=pts/0 ; PWD=/home/sre ; USER=root ; COMMAND=/usr/bin/journalctl -u pagosd -n 50 --no-pager
+2026-09-18T07:55:30-0300 web01 systemd[1]: Dependency failed for tienda-web.service - Front de la tienda.
+2026-09-18T07:55:30-0300 web01 systemd[1]: tienda-web.service: Job tienda-web.service/start failed with result 'dependency'.
+2026-09-18T08:01:12-0300 web01 sudo[3402]: sre : TTY=pts/0 ; PWD=/home/sre ; USER=root ; COMMAND=/usr/bin/systemctl daemon-reload
+2026-09-18T08:01:12-0300 web01 systemd[1]: Reloading requested from client PID 3402 ('systemctl')...
+2026-09-18T08:01:12-0300 web01 systemd[1]: Reloading...
+2026-09-18T08:02:30-0300 web01 systemd[1]: Reloaded nginx.service - A high performance web server.

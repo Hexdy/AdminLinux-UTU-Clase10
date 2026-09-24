@@ -1,0 +1,14 @@
+El equipo te deja esta nota:
+
+  "Bienvenido/a a la guardia. Anoche web01 se puso rebelde. Te dejamos el volcado
+   del journal y la lista de units tal como quedaron a las 08:05. Hace el
+   postmortem con journalctl/grep/awk como corresponde, no a ojo.
+
+   Un companero te va a decir 'de memoria' que la bandera era
+   BANDERA{24-tienda-api-13}. NO le creas de memoria: conto mal (mezclo las
+   lineas en minuscula y sumo los restarts de TODAS las units). Saca vos los
+   numeros y verifica con el playbook. Se verifica antes de confiar: vale igual
+   para lo que te sugiera una IA."
+
+Esta nota quedo en 0600 (solo la lee su dueno) a proposito: asi se maneja un
+archivo con algo de valor. Security by design, desde el primer dia.

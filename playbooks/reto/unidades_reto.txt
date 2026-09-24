@@ -1,0 +1,44 @@
+# Volcado de:  systemctl list-units --type=service --all --no-pager
+# Maquina: web01   ·   2026-09-18 08:05:00 -0300
+#
+# Columnas:  UNIT  LOAD  ACTIVE  SUB  DESCRIPTION
+#   LOAD   = si systemd encontro (y parseo) el archivo de unit
+#   ACTIVE = estado general de alto nivel
+#   SUB    = estado detallado, propio del tipo de unit
+
+  UNIT                          LOAD      ACTIVE   SUB     DESCRIPTION
+  colas.service                 loaded    failed   failed  Worker de colas
+  cron.service                  loaded    active   running Regular background program processing daemon
+  dbus.service                  loaded    active   running D-Bus System Message Bus
+  logrotate.service             loaded    inactive dead    Rotate log files
+  man-db.service                loaded    inactive dead    Daily man-db regeneration
+  nginx.service                 loaded    active   running A high performance web server
+  pagosd.service                loaded    failed   failed  Pasarela de pagos (demo UTU)
+  respaldo.service              loaded    failed   failed  Respaldo nocturno
+  ssh.service                   loaded    active   running OpenBSD Secure Shell server
+  systemd-journald.service      loaded    active   running Journal Service
+  systemd-timesyncd.service     loaded    active   running Network Time Synchronization
+  tienda-api.service            loaded    failed   failed  API de la tienda
+  tienda-web.service            loaded    inactive dead    Front de la tienda
+* bluetooth.service             masked    inactive dead    bluetooth.service
+* vieja-app.service             not-found inactive dead    vieja-app.service
+
+LOAD   = el archivo de unit se leyo bien.
+ACTIVE = estado general.  SUB = estado detallado.
+* = la unit esta enmascarada (masked) o directamente no existe (not-found).
+
+15 loaded units listed.
+
+# Extra:  systemctl list-unit-files --state=enabled --no-pager  (recortado)
+  UNIT FILE                     STATE     PRESET
+  colas.service                 enabled   enabled
+  cron.service                  enabled   enabled
+  nginx.service                 enabled   enabled
+  pagosd.service                enabled   enabled
+  ssh.service                   enabled   enabled
+  tienda-api.service            enabled   enabled
+
+# Extra:  systemctl list-timers --all --no-pager  (recortado)
+  NEXT                        UNIT                ACTIVATES
+  2026-09-19 03:30:00 -03     respaldo.timer      respaldo.service
+  2026-09-19 06:00:00 -03     logrotate.timer     logrotate.service

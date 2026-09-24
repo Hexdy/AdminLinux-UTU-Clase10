@@ -1,0 +1,49 @@
+===============================================================
+  MISIÓN — Postmortem de web01  ·  AdminLinux Clase 10 (systemd)
+===============================================================
+Estación : {{ ansible_hostname }}
+Distro   : {{ ansible_distribution }} {{ ansible_distribution_version | default('') }} ({{ ansible_os_family }})
+Gestor   : {{ 'apt' if ansible_os_family == 'Debian' else ('pacman' if ansible_os_family == 'Archlinux' else 'dnf') }}
+SSH acá  : {{ 'ssh.service' if ansible_os_family == 'Debian' else 'sshd.service' }}   <-- ojo: el nombre cambia por distro
+Generado : {{ ansible_date_time.date | default('hoy') }}
+
+Sos el SRE de guardia. Anoche web01 se puso rebelde y te dejaron el material
+del incidente en esta carpeta:
+
+  - journal_reto.log     volcado de  journalctl -b -o short-iso --no-pager
+  - unidades_reto.txt    volcado de  systemctl list-units / list-unit-files / list-timers
+  - nota_equipo.txt      la nota del compañero (quedó en 0600, leela igual)
+
+El jefe de guardia quiere 3 números para el postmortem. Sacalos del volcado con
+las herramientas de la clase (journalctl ya lo volcó; ahora es grep / awk /
+sort / uniq / wc):
+
+  R1) ¿Cuántas líneas contienen EXACTAMENTE el texto  Failed with result ?
+      (con F mayúscula. Hay líneas en minúscula que NO cuentan: leé la pista.)
+
+  R2) ¿Qué UNIDAD acumuló más de esas líneas?
+      Escribila SIN el sufijo  .service  (ej: si fuera "correod.service" -> correod)
+
+  R3) ¿Cuántas veces systemd programó un  Scheduled restart job  de ESA unidad?
+      (solo de esa, no de todas)
+
+Con las 3 respuestas armá la bandera, con este formato EXACTO:
+
+      BANDERA{<R1>-<R2>-<R3>}
+
+Verificala con Ansible (no adivines: el playbook te dice si está bien):
+
+      ansible-playbook comprobar_bandera.yml -e "bandera=BANDERA{...}"
+
+Pistas (sin darte el comando hecho):
+  - "Failed with result" y "failed with result" NO son lo mismo para grep.
+    Las de minúscula son caídas por DEPENDENCIA de otra unit: no son fallos
+    propios, no cuentan.
+  - "Failed to start ..." tampoco cuenta: es el resumen, no el resultado.
+  - Para R2 te sirve aislar el nombre de la unit de cada línea y después
+    contar repetidos (pensá en cut/awk + sort + uniq -c + sort -rn).
+  - Para R3 filtrá primero por la unit de R2 y después contá.
+  - Antes de confiar en un número, mirá 3 o 4 líneas a ojo con head/less.
+
+Cuando la tengas verificada (✅), se la decís al profe. No hace falta Pull Request.
+===============================================================
