@@ -61,7 +61,7 @@ Group, WorkingDirectory, Environment, EnvironmentFile), `[Install]` (WantedBy).
 
 **Timers**: `respaldo.timer` (CUÁNDO) dispara `respaldo.service` (QUÉ). `OnCalendar=`,
 `Persistent=true`, `systemctl list-timers`. Ventajas sobre cron: logging integrado,
-dependencias, hardening. (cron a fondo lo vemos en la Clase 13.)
+dependencias, hardening. (cron a fondo lo vemos en la Clase 12.)
 
 **journalctl**: el log centralizado y estructurado (`/var/log/journal/` si es
 persistente, `/run/log/journal/` si es volátil).
